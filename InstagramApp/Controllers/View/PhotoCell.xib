@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="gZA-do-lqe" customClass="PhotoCell" customModule="InstagramApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GaF-Lr-UeF">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="67I-Lx-PrS">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="132.5" id="H7A-tb-21x"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Dai-QF-DOs">
+                        <rect key="frame" x="16" y="139" width="218" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-ze-l6I">
+                                <rect key="frame" x="0.0" y="0.0" width="218" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-JS-LY6">
+                                <rect key="frame" x="0.0" y="15" width="218" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elh-L8-jsP">
+                                <rect key="frame" x="0.0" y="30" width="218" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dai-QF-DOs" firstAttribute="leading" secondItem="GaF-Lr-UeF" secondAttribute="leadingMargin" id="4Wu-oX-5N7"/>
+                    <constraint firstItem="Dai-QF-DOs" firstAttribute="top" secondItem="67I-Lx-PrS" secondAttribute="bottom" constant="8" id="5Pc-lc-i53"/>
+                    <constraint firstItem="67I-Lx-PrS" firstAttribute="leading" secondItem="GaF-Lr-UeF" secondAttribute="leading" id="CQ9-kW-16c"/>
+                    <constraint firstItem="Dai-QF-DOs" firstAttribute="centerX" secondItem="GaF-Lr-UeF" secondAttribute="centerX" id="SyO-O5-nug"/>
+                    <constraint firstItem="67I-Lx-PrS" firstAttribute="centerX" secondItem="GaF-Lr-UeF" secondAttribute="centerX" id="be1-j7-RdX"/>
+                    <constraint firstItem="67I-Lx-PrS" firstAttribute="top" secondItem="GaF-Lr-UeF" secondAttribute="top" constant="-1.5" id="jsR-S8-Gqk"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="499" height="412"/>
+            <connections>
+                <outlet property="nameLabel" destination="0Cb-ze-l6I" id="0IX-o8-uBU"/>
+                <outlet property="photoImage" destination="67I-Lx-PrS" id="urc-wk-VJ0"/>
+                <outlet property="postedDateLabel" destination="elh-L8-jsP" id="GHe-7O-5S8"/>
+                <outlet property="usernameLabel" destination="bgv-JS-LY6" id="Zjb-Si-csT"/>
+            </connections>
+            <point key="canvasLocation" x="13.043478260869566" y="103.79464285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="person.3" catalog="system" width="72" height="35"/>
+    </resources>
+</document>

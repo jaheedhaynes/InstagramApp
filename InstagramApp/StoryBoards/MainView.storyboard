@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="MRv-Lx-8Na">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="7nK-Ff-E34" customClass="ProfileViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHI-c3-pzV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.badge.plus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ds4-Gk-iyS">
+                                <rect key="frame" x="143" y="109" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="732-Ht-MRV">
+                                <rect key="frame" x="279" y="154" width="42" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="ellipsis.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="userphotoUpdateButtonPressed:" destination="7nK-Ff-E34" eventType="touchUpInside" id="QUa-2I-WkD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ua-Fm-2kI">
+                                <rect key="frame" x="20" y="283" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUP-bq-oK3">
+                                <rect key="frame" x="20" y="325" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC7-ZA-152">
+                                <rect key="frame" x="20" y="371" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update Profile"/>
+                                <connections>
+                                    <action selector="updateUserProfileButtonPressed:" destination="7nK-Ff-E34" eventType="touchUpInside" id="Zzd-TK-Oec"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-NB-vez">
+                                <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signoutButtonPressed:" destination="7nK-Ff-E34" eventType="touchUpInside" id="Z18-W6-PVf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HsZ-IS-6ah"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="Profile" image="person.fill" catalog="system" id="FWa-5v-sKX"/>
+                    <connections>
+                        <outlet property="displayUserNameTextField" destination="1Ua-Fm-2kI" id="Rdq-8V-Y5V"/>
+                        <outlet property="emailLabel" destination="lUP-bq-oK3" id="KtJ-QP-rPk"/>
+                        <outlet property="profileImageView" destination="ds4-Gk-iyS" id="0Xi-hj-tLi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nD8-o3-eNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="167.41071428571428"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="H23-p7-E9b">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoViewController" id="0Qi-ta-bsI" customClass="PostImageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Km-Je-eBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-mr-4l9">
+                                <rect key="frame" x="20" y="44" width="374" height="314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RO4-jE-Mwf">
+                                <rect key="frame" x="20" y="366" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjE-pm-4VS">
+                                <rect key="frame" x="192" y="433" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="0Qi-ta-bsI" eventType="touchUpInside" id="Jcw-6v-TeR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ILy-qn-jfj"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Post" image="plus.square" catalog="system" id="IGj-Qf-NeM"/>
+                    <connections>
+                        <outlet property="photoCaptionTextField" destination="RO4-jE-Mwf" id="3eT-B1-ReH"/>
+                        <outlet property="photoImage" destination="D5b-mr-4l9" id="9HB-Cv-gms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6A-be-Hlh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="-480.13392857142856"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="di1-JP-5jH">
+            <objects>
+                <viewController storyboardIdentifier="FeedViewController" id="CCb-5w-WtR" customClass="FeedViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c8d-jK-G9D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LDA-aG-jKk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M3y-dh-dm4">
+                                    <size key="itemSize" width="132" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="caH-mQ-G3Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FOn-Zz-SDx">
+                                            <rect key="frame" x="0.0" y="0.0" width="132" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="132" height="104"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LDA-aG-jKk" firstAttribute="top" secondItem="8vW-Jq-ls0" secondAttribute="top" id="DlP-L6-hkp"/>
+                            <constraint firstItem="8vW-Jq-ls0" firstAttribute="bottom" secondItem="LDA-aG-jKk" secondAttribute="bottom" id="aYM-LD-DII"/>
+                            <constraint firstItem="8vW-Jq-ls0" firstAttribute="trailing" secondItem="LDA-aG-jKk" secondAttribute="trailing" id="mUY-BU-ag4"/>
+                            <constraint firstItem="LDA-aG-jKk" firstAttribute="leading" secondItem="8vW-Jq-ls0" secondAttribute="leading" id="nYm-lt-btb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8vW-Jq-ls0"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="smiley" catalog="system" id="HMp-Rw-76O"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LDA-aG-jKk" id="TUL-Vh-RKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1P-ci-fPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="-1185.2678571428571"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="IT3-zO-ug9">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="sBy-7h-SFI" customClass="MainTabBarController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lax-b2-suz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0Qi-ta-bsI" kind="relationship" relationship="viewControllers" id="Mx6-bW-sm1"/>
+                        <segue destination="7nK-Ff-E34" kind="relationship" relationship="viewControllers" id="nS0-Uu-ojY"/>
+                        <segue destination="CCb-5w-WtR" kind="relationship" relationship="viewControllers" id="4Iy-g6-l0Z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVQ-RL-JSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="-156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipsis.circle" catalog="system" width="64" height="60"/>
+        <image name="person.badge.plus.fill" catalog="system" width="64" height="58"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.square" catalog="system" width="64" height="56"/>
+        <image name="smiley" catalog="system" width="64" height="60"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
