@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-JS-LY6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-JS-LY6">
                                 <rect key="frame" x="0.0" y="15" width="218" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
@@ -57,15 +57,15 @@
             </collectionViewCellContentView>
             <size key="customSize" width="499" height="412"/>
             <connections>
+                <outlet property="captionLabel" destination="bgv-JS-LY6" id="Zjb-Si-csT"/>
                 <outlet property="nameLabel" destination="0Cb-ze-l6I" id="0IX-o8-uBU"/>
                 <outlet property="photoImage" destination="67I-Lx-PrS" id="urc-wk-VJ0"/>
                 <outlet property="postedDateLabel" destination="elh-L8-jsP" id="GHe-7O-5S8"/>
-                <outlet property="usernameLabel" destination="bgv-JS-LY6" id="Zjb-Si-csT"/>
             </connections>
             <point key="canvasLocation" x="13.043478260869566" y="103.79464285714285"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="person.3" catalog="system" width="72" height="35"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
     </resources>
 </document>

@@ -20,10 +20,10 @@ struct UserPhoto {
 extension UserPhoto {
     init(_ dictionary: [String: Any]) {
         self.imageURL = dictionary["imageURL"] as? String ?? "no image url"
-        self.photoCaption = dictionary["photoCaption"] as? String ?? "no photo caption"
+        self.photoCaption = dictionary["photoName"] as? String ?? "no photo caption"
         self.photoId = dictionary["photoId"] as? String ?? "no photoId"
         self.listedDate = dictionary["listedDate"] as? Date ?? Date()
-        self.userNamePosted = dictionary["userNamePosted"] as? String ?? "no user name"
+        self.userNamePosted = dictionary["userPostedName"] as? String ?? "no user name"
         self.userIDPhotoPost = dictionary["userIDPhotoPost"] as? String ?? "no user ID"
     }
 }

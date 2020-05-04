@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300D2586245C7A59000B8070 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D2585245C7A59000B8070 /* DetailViewController.swift */; };
 		301901962411B07B00F33890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301901952411B07B00F33890 /* AppDelegate.swift */; };
 		301901982411B07B00F33890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301901972411B07B00F33890 /* SceneDelegate.swift */; };
 		3019019A2411B07B00F33890 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301901992411B07B00F33890 /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300D2585245C7A59000B8070 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		301901922411B07B00F33890 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301901952411B07B00F33890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		301901972411B07B00F33890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				301901992411B07B00F33890 /* LoginViewController.swift */,
 				30874B3824179FBB00034DC4 /* MainTabBarController.swift */,
 				30874B3A24179FE000034DC4 /* FeedViewController.swift */,
+				300D2585245C7A59000B8070 /* DetailViewController.swift */,
 				30874B3C24179FF400034DC4 /* PostImageViewController.swift */,
 				30874B3E2417A00600034DC4 /* ProfileViewController.swift */,
 				30874B442417AA0700034DC4 /* View */,
@@ -407,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30874B3D24179FF400034DC4 /* PostImageViewController.swift in Sources */,
+				300D2586245C7A59000B8070 /* DetailViewController.swift in Sources */,
 				307A3DEB2415B541005BEBB9 /* UserPhoto.swift in Sources */,
 				3019019A2411B07B00F33890 /* LoginViewController.swift in Sources */,
 				30874B3B24179FE000034DC4 /* FeedViewController.swift in Sources */,

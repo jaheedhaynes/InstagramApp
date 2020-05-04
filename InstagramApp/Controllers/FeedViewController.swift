@@ -75,12 +75,21 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let maxSize: CGSize = UIScreen.main.bounds.size
         let itemWidth: CGFloat = maxSize.width
-        let itemHeight: CGFloat = maxSize.height * 0.30
+        let itemHeight: CGFloat = maxSize.height * 0.50
         return CGSize(width: itemWidth, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let image = images[indexPath.row]
+        let mainViewSB = UIStoryboard(name: "MainView", bundle: nil)
+        let postDetailVC = mainViewSB.instantiateViewController(identifier: "DetailViewController") { coder in
+            return DetailViewController(coder: coder)
+        }
+        present(postDetailVC, animated: true)
     }
     
 }

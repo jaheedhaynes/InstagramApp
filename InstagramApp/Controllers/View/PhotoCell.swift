@@ -15,25 +15,26 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
     
     @IBOutlet weak var postedDateLabel: UILabel!
     
     public func configureCell(for photo: UserPhoto) {
-           photoImage.kf.setImage(with: URL(string: photo.imageURL))
-           nameLabel.text = photo.photoCaption
-           usernameLabel.text = "Posted by user @\(photo.userNamePosted)"
-           
-           let formatter = DateFormatter()
-           formatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
-           
-           if let date = formatter.date(from: photo.listedDate.description) {
-               print(date)
-               
-               let displayFormatter = DateFormatter()
-               displayFormatter.dateFormat = "MM/dd/yyyy HH:mm"
-               print(displayFormatter.string(from: date))
-               postedDateLabel.text = displayFormatter.string(from: date)
-           }
-       }
+        photoImage.kf.setImage(with: URL(string: photo.imageURL))
+        nameLabel.text = photo.userIDPhotoPost
+        //           captionLabel.text = "Posted by user @\(photo.userNamePosted)"
+        captionLabel.text = photo.photoCaption
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
+        
+        if let date = formatter.date(from: photo.listedDate.description) {
+            print(date)
+            
+            let displayFormatter = DateFormatter()
+            displayFormatter.dateFormat = "MM/dd/yyyy HH:mm"
+            print(displayFormatter.string(from: date))
+            postedDateLabel.text = displayFormatter.string(from: date)
+        }
+    }
 }
